@@ -21,8 +21,8 @@ namespace KenanOzturk.Controllers
             MailMessage mailim = new MailMessage();
             mailim.To.Add("example@gmail.com");
             mailim.From = new MailAddress("example@gmail.com");
-            mailim.Subject = "Contact me sayfasından mesaj var." + model.Baslik;
-            mailim.Body = "Sayın yetkili," + model.AdSoyad + "kişisinden mesaj aldınız. <br>" + model.Icerik;
+            mailim.Subject = "Contact me sayfasından mesaj var./n" + "Başlık:" + model.Baslik;
+            mailim.Body = "Sayın yetkili," + model.AdSoyad + "kişisinden mesaj aldınız. <br>" + "İçerik:" + model.Icerik + "<br>" + "Gönderen Mail:"+ model.Mail ;
             mailim.IsBodyHtml = true;
 
             SmtpClient smtp = new SmtpClient();
